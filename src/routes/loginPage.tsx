@@ -60,13 +60,17 @@ export const AuthenticationForm = (props: PaperProps) => {
     };
 
     return (
-        <Container size="xs" px="xs">
-            <Paper radius="md" p="xl" withBorder {...props}>
+        <Container size="xs" >
+            {/* <Paper radius="md" p="xl" withBorder {...props}> */}
+            <Paper p="xl">
+
+            <img src="../nextroll_logo.svg" alt="Logo" className="Nextroll_logo" />
                 <Text size="lg" fw={500}>
-                    Welcome to Nextroll SE Team, {type} with
+                    {/* Welcome to Nextroll SE Team, {type} with */}
+                     {type} to Nextroll HTML validator by SE Team 
                 </Text>
 
-                <Divider label="Or continue with email" labelPosition="center" my="lg" />
+                <Divider label="Continue with email" labelPosition="center" my="lg" />
 
                 <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
                     <Stack >
@@ -110,7 +114,7 @@ export const AuthenticationForm = (props: PaperProps) => {
                     </Stack>
 
                     <Group mt="xl">
-                        <Anchor component="button" type="button" color="dimmed" onClick={() => toggle()} size="xs">
+                        <Anchor component="button" type="button" color="dimmed" onClick={() => toggle()} size="sm">
                             {type === 'register'
                                 ? 'Already have an account? Login'
                                 : "Don't have an account? Register"}

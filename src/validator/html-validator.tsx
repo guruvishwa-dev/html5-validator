@@ -94,7 +94,7 @@ export const HtmlValidator = () => {
     };
 
     return (
-        <Container>
+        <Container size="sm" py="xl">
             <Title mb="lg">HTML5 Ad Validator Tool</Title>
             <Grid>
                 <Grid.Col span={6}>
